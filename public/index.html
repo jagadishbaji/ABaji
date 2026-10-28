@@ -1,0 +1,1122 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>S V Tours & Travels | Outstation Cabs & Taxi Service in Hubballi, Karnataka</title>
+  <meta name="description" content="S V Tours & Travels - Reliable outstation cabs & taxi service in Hubballi, Karnataka. Sedan at Rs. 11/km, Ertiga at Rs. 15/km, Innova at Rs. 16/km, Innova Crysta at Rs. 18/km. Call +91 8073 791 662." />
+  <meta name="keywords" content="S V Tours & Travels, SV Tours Travels, Hubballi cab booking, outstation taxi Hubli, Ertiga cab, Innova Crysta, Karnataka cab service" />
+  <meta name="author" content="S V Tours & Travels" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#fff7ed',
+              500: '#f97316',
+              600: '#ea580c',
+              700: '#c2410c'
+            },
+            navy: {
+              800: '#14213d',
+              900: '#0b1626',
+              950: '#070f1a'
+            }
+          },
+          fontFamily: {
+            sans: ['Poppins', 'Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+    * { font-family: 'Poppins', 'Inter', sans-serif; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { overflow-x: hidden; }
+
+    #navbar { transition: background 0.3s ease, box-shadow 0.3s ease; }
+    #navbar.scrolled {
+      background: rgba(11, 22, 38, 0.98);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    #mobileMenu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+    }
+    #mobileMenu.open { max-height: 450px; }
+
+    .burger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #ffffff;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+    .burger span + span { margin-top: 5px; }
+    .burger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .burger.open span:nth-child(2) { opacity: 0; }
+    .burger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+    .wa-float-btn {
+      animation: wa-pulse 2.5s infinite;
+    }
+    @keyframes wa-pulse {
+      0%, 100% { box-shadow: 0 6px 20px rgba(34, 197, 94, 0.45), 0 0 0 0 rgba(34, 197, 94, 0.4); }
+      50% { box-shadow: 0 8px 25px rgba(34, 197, 94, 0.55), 0 0 0 12px rgba(34, 197, 94, 0); }
+    }
+
+    .faq-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, opacity 0.3s ease;
+      opacity: 0;
+    }
+    .faq-item.open .faq-body {
+      max-height: 350px;
+      opacity: 1;
+    }
+    .faq-icon { transition: transform 0.3s ease; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); color: #ea580c; }
+
+    .card-hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .img-zoom img {
+      transition: transform 0.5s ease;
+    }
+    .img-zoom:hover img {
+      transform: scale(1.04);
+    }
+
+    @media (max-width: 768px) {
+      body { padding-bottom: 72px; }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-orange-500 selection:text-white">
+
+  <!-- ══════════════════════ CLEAN & SIMPLE NAVBAR ══════════════════════ -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-navy-950/95 backdrop-blur-md border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-20">
+
+        <!-- Logo & Brand Name -->
+        <a href="#home" class="flex items-center gap-3">
+          <div class="w-12 h-12 rounded-xl overflow-hidden bg-orange-500 flex items-center justify-center shadow-md flex-shrink-0">
+            <img src="images/svt-logo.png" alt="S V Tours &amp; Travels" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='public/images/svt-logo.png';"/>
+          </div>
+          <div>
+            <div class="font-black text-xl text-white tracking-tight leading-tight">S V Tours &amp; Travels</div>            <div class="text-xs text-orange-400 font-medium tracking-wide">Hubballi, Karnataka</div>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#home" class="text-slate-200 hover:text-orange-400 text-sm font-semibold transition-colors">Home</a>
+          <a href="#fleet" class="text-slate-200 hover:text-orange-400 text-sm font-semibold transition-colors">Fleet &amp; Rates</a>
+          <a href="#portfolio" class="text-slate-200 hover:text-orange-400 text-sm font-semibold transition-colors">Customer Reviews</a>
+          <a href="#about" class="text-slate-200 hover:text-orange-400 text-sm font-semibold transition-colors">About Us</a>
+          <a href="#contact" class="text-slate-200 hover:text-orange-400 text-sm font-semibold transition-colors">Contact</a>
+        </div>
+
+        <!-- Desktop Actions: Call Owner & WhatsApp Book -->
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="tel:+918073791662" class="border border-slate-700 hover:border-orange-500 text-slate-200 hover:text-orange-400 font-bold px-4 py-2.5 rounded-xl text-xs transition-all flex items-center gap-2">
+            <svg class="w-4 h-4 text-orange-400" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a11 11 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"/>
+            </svg>
+            <span>+91 8073 791 662</span>
+          </a>
+          <a href="#" onclick="openWA('Hello S V Tours &amp; Travels! I would like to book a cab.'); return false;"
+             class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-5 py-2.5 rounded-xl text-xs transition-all shadow-md hover:scale-105 flex items-center gap-2">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            <span>Book Now</span>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button onclick="toggleMenu()" class="burger lg:hidden p-2 text-white focus:outline-none" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobileMenu" class="lg:hidden bg-navy-950 border-t border-slate-800">
+      <div class="px-5 py-4 space-y-2">
+        <a href="#home" onclick="toggleMenu()" class="block font-medium text-slate-200 py-2.5 px-3 rounded-lg hover:bg-slate-800 hover:text-orange-400">Home</a>
+        <a href="#fleet" onclick="toggleMenu()" class="block font-medium text-slate-200 py-2.5 px-3 rounded-lg hover:bg-slate-800 hover:text-orange-400">Fleet &amp; Rates</a>
+        <a href="#portfolio" onclick="toggleMenu()" class="block font-medium text-slate-200 py-2.5 px-3 rounded-lg hover:bg-slate-800 hover:text-orange-400">Customer Reviews</a>
+        <a href="#about" onclick="toggleMenu()" class="block font-medium text-slate-200 py-2.5 px-3 rounded-lg hover:bg-slate-800 hover:text-orange-400">About Us</a>
+        <a href="#contact" onclick="toggleMenu()" class="block font-medium text-slate-200 py-2.5 px-3 rounded-lg hover:bg-slate-800 hover:text-orange-400">Contact</a>
+        <div class="pt-2 grid grid-cols-2 gap-3">
+          <a href="tel:+918073791662" class="flex items-center justify-center gap-2 bg-slate-800 text-slate-100 font-bold py-3 rounded-xl text-xs border border-slate-700">
+            Call Owner
+          </a>
+          <a href="#" onclick="openWA('Hello S V Tours &amp; Travels! I want to book a cab.'); toggleMenu(); return false;" class="flex items-center justify-center gap-2 bg-emerald-600 text-white font-bold py-3 rounded-xl text-xs">
+            WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════ HERO SECTION ══════════════════════ -->
+  <section id="home" class="relative min-h-[90vh] flex items-center justify-center bg-navy-950 overflow-hidden pt-28 pb-16 lg:py-32">
+    <!-- Hero Background Image & Gradient Overlays -->
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('images/hero-bg.jpg'); filter: brightness(0.28);"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-950/90 to-transparent"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+
+        <!-- Hero Content (Left) -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 bg-orange-500/20 border border-orange-500/40 rounded-full px-4 py-1.5 text-orange-300 text-xs sm:text-sm font-semibold">
+            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+            Reliable Cab &amp; Outstation Service Across Karnataka
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-[1.15] tracking-tight">
+            Travel Comfortably.<br/>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-300">
+              Safe &amp; Affordable Cabs
+            </span><br/>
+            Across South India.
+          </h1>
+
+          <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-xl">
+            S V Tours &amp; Travels provides safe, punctual, and well-maintained cabs for temple pilgrimages, outstation tours, airport transfers, and family vacations.
+          </p>
+
+          <!-- Rate Overview Cards -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2 max-w-xl">
+            <div class="bg-navy-900/90 border border-slate-700/80 p-3 rounded-2xl">
+              <span class="text-[11px] font-bold text-slate-400 block uppercase">Sedan</span>
+              <div class="text-orange-400 font-black text-lg">Rs. 11<span class="text-xs font-normal text-slate-300">/km</span></div>
+              <span class="text-[10px] text-slate-400">Bata Rs. 300/day</span>
+            </div>
+            <div class="bg-navy-900/90 border border-orange-500/60 p-3 rounded-2xl">
+              <span class="text-[11px] font-bold text-orange-300 block uppercase">Ertiga</span>
+              <div class="text-orange-400 font-black text-lg">Rs. 15<span class="text-xs font-normal text-slate-300">/km</span></div>
+              <span class="text-[10px] text-slate-400">Bata Rs. 400/day</span>
+            </div>
+            <div class="bg-navy-900/90 border border-slate-700/80 p-3 rounded-2xl">
+              <span class="text-[11px] font-bold text-slate-400 block uppercase">Innova</span>
+              <div class="text-orange-400 font-black text-lg">Rs. 16<span class="text-xs font-normal text-slate-300">/km</span></div>
+              <span class="text-[10px] text-slate-400">Bata Rs. 400/day</span>
+            </div>
+            <div class="bg-navy-900/90 border border-slate-700/80 p-3 rounded-2xl">
+              <span class="text-[11px] font-bold text-slate-400 block uppercase">Crysta</span>
+              <div class="text-orange-400 font-black text-lg">Rs. 18<span class="text-xs font-normal text-slate-300">/km</span></div>
+              <span class="text-[10px] text-slate-400">Bata Rs. 400/day</span>
+            </div>
+          </div>
+
+          <!-- Highlight Points -->
+          <div class="flex flex-wrap items-center gap-4 text-xs font-medium text-slate-300 pt-1">
+            <span class="flex items-center gap-1.5">
+              <span class="text-emerald-400 font-bold">&#10003;</span> Per Day 300 KM Standard Mileage
+            </span>
+            <span class="flex items-center gap-1.5">
+              <span class="text-emerald-400 font-bold">&#10003;</span> Transparent Driver Bata
+            </span>
+            <span class="flex items-center gap-1.5">
+              <span class="text-emerald-400 font-bold">&#10003;</span> Clean &amp; Sanitized Cabs
+            </span>
+          </div>
+
+          <div class="flex flex-wrap gap-4 pt-3">
+            <a href="#" onclick="openWA('Hello S V Tours &amp; Travels! I would like to book a cab.'); return false;"
+               class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-7 py-3.5 rounded-2xl text-sm transition-all hover:scale-105 shadow-xl flex items-center gap-2.5">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              <span>Book on WhatsApp</span>
+            </a>
+            <a href="tel:+918073791662"
+               class="bg-white/10 hover:bg-white/20 text-white font-bold px-6 py-3.5 rounded-2xl text-sm transition-all border border-white/20 flex items-center gap-2">
+              <svg class="w-4 h-4 text-orange-400" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a11 11 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"/>
+              </svg>
+              <span>Call Owner</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Clean Booking Card (Right) -->
+        <div class="lg:col-span-5 w-full">
+          <div class="bg-white rounded-3xl shadow-2xl p-6 sm:p-8 border border-slate-200 text-slate-800">
+            <div class="mb-5">
+              <h2 class="text-2xl font-black text-slate-900">Book Your Cab</h2>
+              <p class="text-slate-500 text-xs mt-1">Fill the details below for instant WhatsApp confirmation.</p>
+            </div>
+
+            <form onsubmit="submitQuickBooking(event)" class="space-y-3.5">
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <label class="text-[11px] font-bold text-slate-600 uppercase tracking-wider block mb-1">Your Name</label>
+                  <input required type="text" id="hb_name" placeholder="Full Name"
+                         class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm focus:outline-none focus:border-orange-500 focus:bg-white" />
+                </div>
+                <div>
+                  <label class="text-[11px] font-bold text-slate-600 uppercase tracking-wider block mb-1">Phone Number</label>
+                  <input required type="tel" id="hb_phone" placeholder="Mobile No."
+                         class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm focus:outline-none focus:border-orange-500 focus:bg-white" />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <label class="text-[11px] font-bold text-slate-600 uppercase tracking-wider block mb-1">Pickup Location</label>
+                  <input required type="text" id="hb_from" placeholder="From (e.g. Hubli / Bangalore)"
+                         class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm focus:outline-none focus:border-orange-500 focus:bg-white" />
+                </div>
+                <div>
+                  <label class="text-[11px] font-bold text-slate-600 uppercase tracking-wider block mb-1">Destination</label>
+                  <input required type="text" id="hb_to" placeholder="To (e.g. Dharmasthala)"
+                         class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm focus:outline-none focus:border-orange-500 focus:bg-white" />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <label class="text-[11px] font-bold text-slate-600 uppercase tracking-wider block mb-1">Select Vehicle</label>
+                  <select id="hb_vehicle" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-xs font-semibold text-slate-700 focus:outline-none focus:border-orange-500">
+                    <option value="Sedan (Rs. 11/km, Bata Rs. 300)">Sedan (Rs. 11/km, Bata Rs. 300)</option>
+                    <option value="Maruti Ertiga (Rs. 15/km, Bata Rs. 400)" selected>Maruti Ertiga (Rs. 15/km, Bata Rs. 400)</option>
+                    <option value="Toyota Innova (Rs. 16/km, Bata Rs. 400)">Toyota Innova (Rs. 16/km, Bata Rs. 400)</option>
+                    <option value="Innova Crysta (Rs. 18/km, Bata Rs. 400)">Innova Crysta (Rs. 18/km, Bata Rs. 400)</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="text-[11px] font-bold text-slate-600 uppercase tracking-wider block mb-1">Travel Date</label>
+                  <input required type="date" id="hb_date"
+                         class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-xs focus:outline-none focus:border-orange-500" />
+                </div>
+              </div>
+
+              <div>
+                <label class="text-[11px] font-bold text-slate-600 uppercase tracking-wider block mb-1">Trip Type</label>
+                <div class="grid grid-cols-3 gap-2">
+                  <button type="button" onclick="setTripType(this, 'Round Trip')"
+                          class="trip-btn py-2 rounded-xl text-xs font-bold border-2 border-orange-500 bg-orange-500 text-white transition-all text-center">Round Trip</button>
+                  <button type="button" onclick="setTripType(this, 'One Way')"
+                          class="trip-btn py-2 rounded-xl text-xs font-bold border-2 border-slate-200 text-slate-600 hover:border-orange-300 transition-all text-center">One Way</button>
+                  <button type="button" onclick="setTripType(this, 'Multi-Day Tour')"
+                          class="trip-btn py-2 rounded-xl text-xs font-bold border-2 border-slate-200 text-slate-600 hover:border-orange-300 transition-all text-center">Multi-Day</button>
+                </div>
+              </div>
+
+              <button type="submit"
+                      class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3.5 rounded-2xl text-sm flex items-center justify-center gap-2 shadow-lg transition-all hover:scale-[1.01]">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                <span>Confirm on WhatsApp Instantly</span>
+              </button>
+
+              <p class="text-center text-[11px] text-slate-400">
+                Direct booking with owner &bull; No advance booking commission
+              </p>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ STATS STRIP ══════════════════════ -->
+  <section class="bg-navy-900 border-y border-slate-800 py-8 text-center text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div>
+        <div class="text-3xl font-black text-white">850+</div>
+        <div class="text-xs text-orange-400 font-semibold uppercase tracking-wider mt-1">Happy Journeys</div>
+      </div>
+      <div>
+        <div class="text-3xl font-black text-white">7+</div>
+        <div class="text-xs text-orange-400 font-semibold uppercase tracking-wider mt-1">Fleet Vehicles</div>
+      </div>
+      <div>
+        <div class="text-3xl font-black text-white">1,50,000+</div>
+        <div class="text-xs text-orange-400 font-semibold uppercase tracking-wider mt-1">KM Travelled</div>
+      </div>
+      <div>
+        <div class="text-3xl font-black text-amber-400">4.9 / 5.0</div>
+        <div class="text-xs text-orange-400 font-semibold uppercase tracking-wider mt-1">Customer Rating</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ FLEET BANNER ══════════════════════ -->
+  <section class="py-10 bg-slate-900 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="relative rounded-3xl overflow-hidden border border-slate-700 shadow-xl">
+        <img src="images/svt-fleet-lineup.png" alt="S V Tours &amp; Travels Fleet Lineup" class="w-full h-60 sm:h-80 md:h-96 object-cover"
+             onerror="this.onerror=null; this.src='public/images/svt-fleet-lineup.png';"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/60 to-transparent flex flex-col justify-end p-6 sm:p-8">
+          <div class="text-xs font-bold text-orange-400 uppercase tracking-widest mb-1">S V Tours &amp; Travels Dedicated Fleet</div>
+          <h3 class="text-xl sm:text-3xl font-black text-white">Ready For Outstation, Pilgrimages &amp; Family Tours</h3>
+          <p class="text-slate-300 text-xs sm:text-sm mt-1 max-w-xl">Commercial yellow board vehicles, verified experienced drivers, and well-maintained cabs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ FLEET & OUTSTATION TARIFF ══════════════════════ -->
+  <section id="fleet" class="py-16 md:py-24 bg-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-orange-600 font-bold uppercase tracking-widest text-xs">Our Vehicles &amp; Pricing</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-1">Outstation <span class="text-orange-600">Fleet &amp; Rates</span></h2>
+        <p class="text-slate-600 mt-2 text-sm sm:text-base">Transparent rates with clear driver allowance and standard 300 km/day mileage rule.</p>
+      </div>
+
+      <!-- 4 Vehicle Cards Grid -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-14">
+
+        <!-- Sedan -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-md border border-slate-200 card-hover flex flex-col justify-between">
+          <div>
+            <div class="relative h-48 bg-slate-800 img-zoom overflow-hidden">
+              <img src="images/fleet-sedan.jpg" alt="Swift Dzire Sedan KA 63 A 7288" class="w-full h-full object-cover"
+                   onerror="this.onerror=null; this.src='public/images/fleet-sedan.jpg';"/>
+              <span class="absolute top-3 left-3 bg-slate-900/90 text-white text-[11px] font-bold px-2.5 py-1 rounded-full">
+                4 + 1 Seater
+              </span>
+              <div class="absolute bottom-3 right-3 bg-orange-600 text-white font-black text-sm px-3 py-1 rounded-xl">
+                Rs. 11 / KM
+              </div>
+            </div>
+
+            <div class="p-5">
+              <div class="flex items-center justify-between"><h3 class="text-lg font-black text-slate-900">Swift Dzire Sedan</h3><span class="text-[10px] font-bold text-orange-600 bg-orange-50 px-2 py-0.5 rounded">KA 63 A 7288</span></div>
+              <p class="text-slate-500 text-xs mb-4">S V Tours &amp; Travels own sedan (KA 63 A 7288). Clean, comfortable, ideal for couples, small families and airport runs.</p>
+
+              <div class="bg-slate-50 rounded-2xl p-3 border border-slate-100 space-y-2 text-xs mb-4">
+                <div class="flex justify-between">
+                  <span class="text-slate-600">Per KM Rate:</span>
+                  <span class="font-black text-orange-600">Rs. 11 / km</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-slate-600">Driver Bata (Allowance):</span>
+                  <span class="font-bold text-slate-900">Rs. 300 / day</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-slate-600">Min. Daily Mileage:</span>
+                  <span class="font-bold text-slate-900">300 km / day</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-slate-600">Extra KM Rate:</span>
+                  <span class="font-bold text-slate-900">Rs. 11 / km</span>
+                </div>
+              </div>
+
+              <div class="flex flex-wrap gap-1.5 text-[11px] text-slate-600 font-medium">
+                <span class="bg-slate-100 px-2.5 py-1 rounded-lg">AC</span>
+                <span class="bg-slate-100 px-2.5 py-1 rounded-lg">Boot Space</span>
+                <span class="bg-slate-100 px-2.5 py-1 rounded-lg">Music System</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-5 pt-0">
+            <a href="#" onclick="openWA('Hello S V Tours &amp; Travels! I would like to book Sedan at Rs. 11/km (Driver Bata Rs. 300).'); return false;"
+               class="w-full bg-slate-900 hover:bg-orange-600 text-white font-bold py-2.5 rounded-xl text-center text-xs flex items-center justify-center gap-1.5 transition-colors">
+              <span>Book Sedan via WhatsApp</span>
+              <span>&rarr;</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Maruti Ertiga (KA 63 A 6068) -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-lg border-2 border-orange-500 card-hover flex flex-col justify-between">
+          <div>
+            <div class="relative h-48 bg-slate-800 img-zoom overflow-hidden">
+              <img src="images/fleet-ertiga.png" alt="Maruti Ertiga S V Tours &amp; Travels" class="w-full h-full object-cover"
+                   onerror="this.onerror=null; this.src='public/images/fleet-ertiga.png';"/>
+              <span class="absolute top-3 left-3 bg-slate-900/90 text-white text-[11px] font-bold px-2.5 py-1 rounded-full">
+                6 + 1 Seater
+              </span>
+              <div class="absolute bottom-3 right-3 bg-orange-600 text-white font-black text-sm px-3 py-1 rounded-xl">
+                Rs. 15 / KM
+              </div>
+            </div>
+
+            <div class="p-5">
+              <div class="flex items-center justify-between">
+                <h3 class="text-lg font-black text-slate-900">Maruti Ertiga</h3>
+                <span class="text-[10px] font-bold text-orange-600 bg-orange-50 px-2 py-0.5 rounded">KA 63 A 6068</span>
+              </div>
+              <p class="text-slate-500 text-xs mb-4">S V Tours &amp; Travels own MPV with top luggage carrier rack. Perfect for family pilgrimages &amp; trips.</p>
+
+              <div class="bg-orange-50/60 rounded-2xl p-3 border border-orange-100 space-y-2 text-xs mb-4">
+                <div class="flex justify-between">
+                  <span class="text-slate-700">Per KM Rate:</span>
+                  <span class="font-black text-orange-600">Rs. 15 / km</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-slate-700">Driver Bata (Allowance):</span>
+                  <span class="font-bold text-slate-900">Rs. 400 / day</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-slate-700">Min. Daily Mileage:</span>
+                  <span class="font-bold text-slate-900">300 km / day</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-slate-700">Extra KM Rate:</span>
+                  <span class="font-bold text-slate-900">Rs. 15 / km</span>
+                </div>
+              </div>
+
+              <div class="flex flex-wrap gap-1.5 text-[11px] text-slate-600 font-medium">
+                <span class="bg-orange-50 text-orange-800 px-2.5 py-1 rounded-lg">Dual AC</span>
+                <span class="bg-orange-50 text-orange-800 px-2.5 py-1 rounded-lg">Roof Luggage Carrier</span>
+                <span class="bg-orange-50 text-orange-800 px-2.5 py-1 rounded-lg">Reclining Seats</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-5 pt-0">
+            <a href="#" onclick="openWA('Hello S V Tours &amp; Travels! I would like to book Maruti Ertiga at Rs. 15/km (Driver Bata Rs. 400).'); return false;"
+               class="w-full bg-orange-600 hover:bg-orange-500 text-white font-bold py-2.5 rounded-xl text-center text-xs flex items-center justify-center gap-1.5 shadow-md transition-colors">
+              <span>Book Ertiga via WhatsApp</span>
+              <span>&rarr;</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Toyota Innova -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-md border border-slate-200 card-hover flex flex-col justify-between">
+          <div>
+            <div class="relative h-48 bg-slate-800 img-zoom overflow-hidden">
+              <img src="images/fleet-innova.jpg" alt="Toyota Innova Cab" class="w-full h-full object-cover"
+                   onerror="this.onerror=null; this.src='public/images/fleet-innova.jpg';"/>
+              <span class="absolute top-3 left-3 bg-slate-900/90 text-white text-[11px] font-bold px-2.5 py-1 rounded-full">
+                7 + 1 Seater
+              </span>
+              <div class="absolute bottom-3 right-3 bg-orange-600 text-white font-black text-sm px-3 py-1 rounded-xl">
+                Rs. 16 / KM
+              </div>
+            </div>
+
+            <div class="p-5">
+              <h3 class="text-lg font-black text-slate-900">Toyota Innova</h3>
+              <p class="text-slate-500 text-xs mb-4">Supreme highway comfort and legroom. Ideal for long-distance family tours and ghat sections.</p>
+
+              <div class="bg-slate-50 rounded-2xl p-3 border border-slate-100 space-y-2 text-xs mb-4">
+                <div class="flex justify-between">
+                  <span class="text-slate-600">Per KM Rate:</span>
+                  <span class="font-black text-orange-600">Rs. 16 / km</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-slate-600">Driver Bata (Allowance):</span>
+                  <span class="font-bold text-slate-900">Rs. 400 / day</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-slate-600">Min. Daily Mileage:</span>
+                  <span class="font-bold text-slate-900">300 km / day</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-slate-600">Extra KM Rate:</span>
+                  <span class="font-bold text-slate-900">Rs. 16 / km</span>
+                </div>
+              </div>
+
+              <div class="flex flex-wrap gap-1.5 text-[11px] text-slate-600 font-medium">
+                <span class="bg-slate-100 px-2.5 py-1 rounded-lg">High Suspension</span>
+                <span class="bg-slate-100 px-2.5 py-1 rounded-lg">Captain Seats</span>
+                <span class="bg-slate-100 px-2.5 py-1 rounded-lg">Dual AC</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-5 pt-0">
+            <a href="#" onclick="openWA('Hello S V Tours &amp; Travels! I would like to book Toyota Innova at Rs. 16/km (Driver Bata Rs. 400).'); return false;"
+               class="w-full bg-slate-900 hover:bg-orange-600 text-white font-bold py-2.5 rounded-xl text-center text-xs flex items-center justify-center gap-1.5 transition-colors">
+              <span>Book Innova via WhatsApp</span>
+              <span>&rarr;</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Toyota Innova Crysta (KA 22 AA 9955) -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-md border border-slate-200 card-hover flex flex-col justify-between">
+          <div>
+            <div class="relative h-48 bg-slate-800 img-zoom overflow-hidden">
+              <img src="images/fleet-innova-crysta.png" alt="Toyota Innova Crysta S V Tours &amp; Travels" class="w-full h-full object-cover"
+                   onerror="this.onerror=null; this.src='public/images/fleet-innova-crysta.png';"/>
+              <span class="absolute top-3 left-3 bg-amber-500 text-slate-950 text-[11px] font-black px-2.5 py-1 rounded-full">
+                Luxury MPV
+              </span>
+              <div class="absolute bottom-3 right-3 bg-orange-600 text-white font-black text-sm px-3 py-1 rounded-xl">
+                Rs. 18 / KM
+              </div>
+            </div>
+
+            <div class="p-5">
+              <div class="flex items-center justify-between">
+                <h3 class="text-lg font-black text-slate-900">Innova Crysta</h3>
+                <span class="text-[10px] font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded">KA 22 AA 9955</span>
+              </div>
+              <p class="text-slate-500 text-xs mb-4">S V Tours &amp; Travels luxury executive cab. Ultra-smooth ride, silent cabin, and VIP travel comfort.</p>
+
+              <div class="bg-amber-50/50 rounded-2xl p-3 border border-amber-100 space-y-2 text-xs mb-4">
+                <div class="flex justify-between">
+                  <span class="text-slate-700">Per KM Rate:</span>
+                  <span class="font-black text-orange-600">Rs. 18 / km</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-slate-700">Driver Bata (Allowance):</span>
+                  <span class="font-bold text-slate-900">Rs. 400 / day</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-slate-700">Min. Daily Mileage:</span>
+                  <span class="font-bold text-slate-900">300 km / day</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-slate-700">Extra KM Rate:</span>
+                  <span class="font-bold text-slate-900">Rs. 18 / km</span>
+                </div>
+              </div>
+
+              <div class="flex flex-wrap gap-1.5 text-[11px] text-slate-600 font-medium">
+                <span class="bg-amber-100/70 text-amber-900 px-2.5 py-1 rounded-lg">Luxury Reclining</span>
+                <span class="bg-amber-100/70 text-amber-900 px-2.5 py-1 rounded-lg">Climate AC</span>
+                <span class="bg-amber-100/70 text-amber-900 px-2.5 py-1 rounded-lg">VIP Presence</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-5 pt-0">
+            <a href="#" onclick="openWA('Hello S V Tours &amp; Travels! I would like to book Innova Crysta at Rs. 18/km (Driver Bata Rs. 400).'); return false;"
+               class="w-full bg-slate-900 hover:bg-amber-600 text-white font-bold py-2.5 rounded-xl text-center text-xs flex items-center justify-center gap-1.5 transition-colors">
+              <span>Book Crysta via WhatsApp</span>
+              <span>&rarr;</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Outstation Tariff Comparison Table -->
+      <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-lg border border-slate-200 overflow-hidden">
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-6">
+          <div>
+            <h3 class="text-xl font-black text-slate-900">Outstation Tariff Comparison</h3>
+            <p class="text-xs text-slate-500">Overview of rates, capacity, and driver allowances</p>
+          </div>
+          <span class="bg-slate-100 text-slate-700 text-xs font-semibold px-3 py-1 rounded-full">
+            Standard: 300 KM / Day Mileage Rule
+          </span>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs sm:text-sm">
+            <thead class="bg-slate-50 text-slate-700 uppercase font-bold text-[11px] tracking-wider border-b border-slate-200">
+              <tr>
+                <th class="py-3 px-4">Vehicle Model</th>
+                <th class="py-3 px-4">Seating</th>
+                <th class="py-3 px-4 text-orange-600">Rate / KM</th>
+                <th class="py-3 px-4">Driver Bata</th>
+                <th class="py-3 px-4">Min. 300 KM Base</th>
+                <th class="py-3 px-4">Extra KM Rate</th>
+                <th class="py-3 px-4 text-center">Action</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100">
+              <tr class="hover:bg-slate-50">
+                <td class="py-3.5 px-4 font-bold text-slate-900">Swift Dzire (KA 63 A 7288)</td>
+                <td class="py-3.5 px-4 text-slate-600">4 + 1 Passengers</td>
+                <td class="py-3.5 px-4 font-black text-orange-600">Rs. 11 / km</td>
+                <td class="py-3.5 px-4 text-slate-700">Rs. 300 / day</td>
+                <td class="py-3.5 px-4 text-slate-800">Rs. 3,300 + Bata</td>
+                <td class="py-3.5 px-4 text-slate-700">Rs. 11 / km</td>
+                <td class="py-3.5 px-4 text-center">
+                  <button onclick="openWA('Hi S V Tours &amp; Travels! I would like to book Sedan at Rs. 11/km.')"
+                          class="bg-slate-900 hover:bg-orange-600 text-white font-bold text-xs px-3 py-1 rounded-lg transition-colors">
+                    Book
+                  </button>
+                </td>
+              </tr>
+              <tr class="bg-orange-50/30 hover:bg-orange-50">
+                <td class="py-3.5 px-4 font-bold text-slate-900">
+                  Maruti Ertiga MPV <span class="text-[10px] bg-orange-500 text-white font-bold px-1.5 py-0.2 rounded ml-1">KA 63 A 6068</span>
+                </td>
+                <td class="py-3.5 px-4 text-slate-600">6 + 1 Passengers</td>
+                <td class="py-3.5 px-4 font-black text-orange-600">Rs. 15 / km</td>
+                <td class="py-3.5 px-4 text-slate-700">Rs. 400 / day</td>
+                <td class="py-3.5 px-4 text-slate-800">Rs. 4,500 + Bata</td>
+                <td class="py-3.5 px-4 text-slate-700">Rs. 15 / km</td>
+                <td class="py-3.5 px-4 text-center">
+                  <button onclick="openWA('Hi S V Tours &amp; Travels! I would like to book Maruti Ertiga at Rs. 15/km.')"
+                          class="bg-orange-600 hover:bg-orange-500 text-white font-bold text-xs px-3 py-1 rounded-lg transition-colors">
+                    Book
+                  </button>
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="py-3.5 px-4 font-bold text-slate-900">Toyota Innova</td>
+                <td class="py-3.5 px-4 text-slate-600">7 + 1 Passengers</td>
+                <td class="py-3.5 px-4 font-black text-orange-600">Rs. 16 / km</td>
+                <td class="py-3.5 px-4 text-slate-700">Rs. 400 / day</td>
+                <td class="py-3.5 px-4 text-slate-800">Rs. 4,800 + Bata</td>
+                <td class="py-3.5 px-4 text-slate-700">Rs. 16 / km</td>
+                <td class="py-3.5 px-4 text-center">
+                  <button onclick="openWA('Hi S V Tours &amp; Travels! I would like to book Toyota Innova at Rs. 16/km.')"
+                          class="bg-slate-900 hover:bg-orange-600 text-white font-bold text-xs px-3 py-1 rounded-lg transition-colors">
+                    Book
+                  </button>
+                </td>
+              </tr>
+              <tr class="bg-amber-50/30 hover:bg-amber-50">
+                <td class="py-3.5 px-4 font-bold text-slate-900">
+                  Toyota Innova Crysta <span class="text-[10px] bg-amber-500 text-slate-950 font-bold px-1.5 py-0.2 rounded ml-1">KA 22 AA 9955</span>
+                </td>
+                <td class="py-3.5 px-4 text-slate-600">6+1 / 7+1 Executive</td>
+                <td class="py-3.5 px-4 font-black text-orange-600">Rs. 18 / km</td>
+                <td class="py-3.5 px-4 text-slate-700">Rs. 400 / day</td>
+                <td class="py-3.5 px-4 text-slate-800">Rs. 5,400 + Bata</td>
+                <td class="py-3.5 px-4 text-slate-700">Rs. 18 / km</td>
+                <td class="py-3.5 px-4 text-center">
+                  <button onclick="openWA('Hi S V Tours &amp; Travels! I would like to book Toyota Innova Crysta at Rs. 18/km.')"
+                          class="bg-slate-900 hover:bg-amber-600 text-white font-bold text-xs px-3 py-1 rounded-lg transition-colors">
+                    Book
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="mt-6 pt-5 border-t border-slate-200 grid sm:grid-cols-3 gap-4 text-xs text-slate-600">
+          <div>
+            <strong class="text-slate-800">300 KM / Day Rule:</strong> Outstation trips are billed on minimum 300 km per calendar day.
+          </div>
+          <div>
+            <strong class="text-slate-800">Extra KM Rate:</strong> Traveled beyond 300 km/day? Extra km is billed strictly as per vehicle rate.
+          </div>
+          <div>
+            <strong class="text-slate-800">Tolls, Tax &amp; Parking:</strong> Toll receipts, state border entry permits, and parking are payable at actuals.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════ CUSTOMER PORTFOLIO & REVIEWS ══════════════════════ -->
+  <section id="portfolio" class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-orange-600 font-bold uppercase tracking-widest text-xs">Customer Stories</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-1">Customer <span class="text-orange-600">Portfolio</span> &amp; Reviews</h2>
+        <p class="text-slate-600 mt-2 text-sm sm:text-base">Real moments and genuine 5-star reviews from travelers who trust S V Tours &amp; Travels.</p>
+      </div>
+
+      <!-- Real Customer Photos Spotlights -->
+      <div class="grid lg:grid-cols-2 gap-8 mb-12">
+
+        <!-- Family Pilgrimage (Real Image customer-family.png) -->
+        <div class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-md flex flex-col sm:flex-row">
+          <div class="sm:w-1/2 relative min-h-[260px] overflow-hidden">
+            <img src="images/customer-family.png" alt="S V Tours &amp; Travels Customer Family Tour" class="w-full h-full object-cover"
+                 onerror="this.onerror=null; this.src='public/images/customer-family.png';"/>
+          </div>
+          <div class="sm:w-1/2 p-6 flex flex-col justify-between">
+            <div>
+              <div class="text-amber-500 text-sm font-bold mb-1">&#9733;&#9733;&#9733;&#9733;&#9733; 5.0 / 5.0</div>
+              <div class="text-xs font-bold text-orange-600 uppercase tracking-wide mb-2">Temple Pilgrimage: Dharmasthala &amp; Kukke</div>
+              <h3 class="text-lg font-black text-slate-900 leading-snug mb-2">
+                "Respectful driver, smooth driving on ghats &amp; spotless car!"
+              </h3>
+              <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                "We booked S V Tours &amp; Travels for our yearly temple pilgrimage with our parents and daughter. The driver was very polite, drove safely on ghat hairpins, and helped our elderly parents. Car was clean and comfortable."
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-200 flex justify-between items-center text-xs">
+              <div>
+                <strong class="text-slate-900 block">Dr. Kulkarni &amp; Family</strong>
+                <span class="text-slate-500">Dharwad &bull; Booked Maruti Ertiga</span>
+              </div>
+              <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded">Verified</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Friends Getaway (Real Image customer-group.png) -->
+        <div class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-md flex flex-col sm:flex-row">
+          <div class="sm:w-1/2 relative min-h-[260px] overflow-hidden">
+            <img src="images/customer-group.png" alt="S V Tours &amp; Travels Friends Road Trip" class="w-full h-full object-cover"
+                 onerror="this.onerror=null; this.src='public/images/customer-group.png';"/>
+          </div>
+          <div class="sm:w-1/2 p-6 flex flex-col justify-between">
+            <div>
+              <div class="text-amber-500 text-sm font-bold mb-1">&#9733;&#9733;&#9733;&#9733;&#9733; 5.0 / 5.0</div>
+              <div class="text-xs font-bold text-blue-600 uppercase tracking-wide mb-2">Western Ghats Tour (4 Days)</div>
+              <h3 class="text-lg font-black text-slate-900 leading-snug mb-2">
+                "Heavy luggage accommodated effortlessly on roof carrier!"
+              </h3>
+              <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                "We were a group of 5 friends exploring Chikmagalur and coastal Karnataka. The roof luggage rack on their Ertiga easily took all our camping bags. Punctual, friendly, and honest pricing."
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-200 flex justify-between items-center text-xs">
+              <div>
+                <strong class="text-slate-900 block">Rohan, Amit &amp; Friends</strong>
+                <span class="text-slate-500">Hubli / Bangalore &bull; Booked Ertiga</span>
+              </div>
+              <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded">Verified</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Additional Reviews Grid -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200">
+          <div class="text-amber-500 text-xs mb-2">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="text-slate-600 text-xs leading-relaxed mb-3">"Booked the Innova Crysta for our corporate guests visiting Hubli &amp; Belgaum plants. Top-class luxury and prompt billing."</p>
+          <div class="text-xs font-bold text-slate-800">Suresh Kumar &bull; Corporate Client</div>
+        </div>
+        <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200">
+          <div class="text-amber-500 text-xs mb-2">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="text-slate-600 text-xs leading-relaxed mb-3">"Took their Sedan for an urgent outstation trip. Driver was on time at 5:00 AM sharp! Safe driving and exact meter calculation."</p>
+          <div class="text-xs font-bold text-slate-800">Pooja Reddy &bull; Family Outstation</div>
+        </div>
+        <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200">
+          <div class="text-amber-500 text-xs mb-2">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="text-slate-600 text-xs leading-relaxed mb-3">"Hired 3 cabs for our family wedding in Shimoga. Polite drivers who waited patiently during functions. Very reasonable rates."</p>
+          <div class="text-xs font-bold text-slate-800">Manjunath B. &bull; Wedding Event</div>
+        </div>
+        <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200">
+          <div class="text-amber-500 text-xs mb-2">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="text-slate-600 text-xs leading-relaxed mb-3">"Our Tirupati Balaji darshan trip was completely peaceful. Driver knew temple time slots and drove with extreme care."</p>
+          <div class="text-xs font-bold text-slate-800">Venkatesh Naik &bull; Pilgrimage Tour</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  
+
+  <!-- ══════════════════════ ABOUT US ══════════════════════ -->
+  <section id="about" class="py-16 md:py-24 bg-slate-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <span class="text-orange-400 font-bold uppercase tracking-widest text-xs">About S V Tours &amp; Travels</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-white mt-1 mb-5">
+          S V Tours &amp; Travels
+        </h2>
+        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+          S V Tours &amp; Travels is an independent, family-trusted cab service operating across Karnataka and South India. We own our fleet of vehicles and take personal pride in vehicle hygiene, on-time arrivals, and patient driving.
+        </p>
+        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+          Whether you need a quick airport drop, an outstation business visit, or a multi-day family pilgrimage, our experienced drivers ensure complete peace of mind.
+        </p>
+
+        <div class="grid grid-cols-2 gap-3 text-xs">
+          <div class="bg-slate-800 p-3.5 rounded-xl border border-slate-700">
+            <strong class="text-orange-400 block text-sm">Commercial Yellow Board</strong>
+            <span class="text-slate-400">All Karnataka &amp; All India Permits</span>
+          </div>
+          <div class="bg-slate-800 p-3.5 rounded-xl border border-slate-700">
+            <strong class="text-orange-400 block text-sm">Transparent Pricing</strong>
+            <span class="text-slate-400">Keshwapur, Hubballi, Karnataka</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="rounded-3xl overflow-hidden shadow-2xl border border-slate-700">
+        <img src="images/fleet-ertiga.png" alt="S V Tours &amp; Travels Vehicle" class="w-full h-80 object-cover"
+             onerror="this.onerror=null; this.src='public/images/fleet-ertiga.png';"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ FAQ SECTION ══════════════════════ -->
+  <section class="py-16 bg-slate-100">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10">
+        <span class="text-orange-600 font-bold uppercase tracking-widest text-xs">Got Questions?</span>
+        <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-1">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="space-y-3">
+        <div class="faq-item bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+          <button onclick="toggleFAQ(this)" class="w-full flex justify-between items-center p-4 text-left font-bold text-slate-800 text-sm">
+            <span>What are the outstation rates for different cars?</span>
+            <span class="faq-icon text-xl text-slate-400 font-bold">+</span>
+          </button>
+          <div class="faq-body">
+            <div class="px-4 pb-4 text-slate-600 text-xs leading-relaxed border-t border-slate-100 pt-2">
+              Our rates: Sedan at Rs. 11/km (Driver Bata: Rs. 300/day), Maruti Ertiga at Rs. 15/km (Driver Bata: Rs. 400/day), Toyota Innova at Rs. 16/km (Driver Bata: Rs. 400/day), and Innova Crysta at Rs. 18/km (Driver Bata: Rs. 400/day). Standard 300 km/day minimum billing applies for outstation.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+          <button onclick="toggleFAQ(this)" class="w-full flex justify-between items-center p-4 text-left font-bold text-slate-800 text-sm">
+            <span>How does the 300 KM per day mileage rule work?</span>
+            <span class="faq-icon text-xl text-slate-400 font-bold">+</span>
+          </button>
+          <div class="faq-body">
+            <div class="px-4 pb-4 text-slate-600 text-xs leading-relaxed border-t border-slate-100 pt-2">
+              Outstation trips are calculated with a minimum of 300 km per calendar day. For instance, a 2-day trip has a minimum billing of 600 km. If your journey exceeds 600 km, extra distance is charged as per the vehicle's standard per-km rate.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+          <button onclick="toggleFAQ(this)" class="w-full flex justify-between items-center p-4 text-left font-bold text-slate-800 text-sm">
+            <span>What is Driver Bata (Allowance)?</span>
+            <span class="faq-icon text-xl text-slate-400 font-bold">+</span>
+          </button>
+          <div class="faq-body">
+            <div class="px-4 pb-4 text-slate-600 text-xs leading-relaxed border-t border-slate-100 pt-2">
+              Driver Bata is the daily allowance for the driver's food and stay (Rs. 300/day for Sedan, Rs. 400/day for Ertiga, Innova, and Crysta). You do not need to arrange food or accommodation for the driver.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+          <button onclick="toggleFAQ(this)" class="w-full flex justify-between items-center p-4 text-left font-bold text-slate-800 text-sm">
+            <span>Are toll charges and parking included?</span>
+            <span class="faq-icon text-xl text-slate-400 font-bold">+</span>
+          </button>
+          <div class="faq-body">
+            <div class="px-4 pb-4 text-slate-600 text-xs leading-relaxed border-t border-slate-100 pt-2">
+              Toll charges (Fastag receipts), state permits (if entering another state), and parking fees are payable at actuals with receipts.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- ══════════════════════ SIMPLE FOOTER & CONTACT SECTION ══════════════════════ -->
+  <footer id="contact" class="bg-navy-950 text-white pt-14 pb-10 border-t border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+      <!-- Simple Contact Grid -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 pb-10 border-b border-slate-800">
+
+        <!-- Brand & Office Address -->
+        <div class="space-y-3">
+          <div>
+            <div class="font-black text-xl text-white">S V Tours &amp; Travels</div>
+            <div class="text-orange-400 text-xs font-medium">Hubballi, Karnataka</div>
+          </div>
+          <p class="text-slate-400 text-xs leading-relaxed">
+            Safe, reliable, and comfortable outstation taxi service across Karnataka and South India.
+          </p>
+          <div class="pt-2 border-t border-slate-800/80">
+            <span class="text-orange-400 text-xs font-bold block mb-1">📍 Office Address:</span>
+            <p class="text-slate-300 text-xs leading-relaxed">
+              Byakodi residency,Besides, Kusugal Rd, Keshwapur, Bhavani Nagar, Keshwapur, Hubballi, Karnataka 580023, India
+            </p>
+            <a href="https://maps.google.com/?q=Byakodi+residency,+Besides,+Kusugal+Rd,+Keshwapur,+Bhavani+Nagar,+Hubballi,+Karnataka+580023"
+               target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-1 text-orange-400 hover:text-orange-300 text-[11px] font-semibold mt-1.5 transition-colors">
+              <span>Open in Google Maps</span>
+              <span>&rarr;</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Direct Contact (Owner) -->
+        <div>
+          <h4 class="font-bold text-sm uppercase text-orange-400 tracking-wider mb-3">Contact Owner</h4>
+          <div class="space-y-3 text-xs">
+            <div>
+              <span class="text-slate-400 block mb-0.5">Phone / Call:</span>
+              <a href="tel:+918073791662" class="text-white hover:text-orange-400 font-bold text-base transition-colors flex items-center gap-1.5">
+                <svg class="w-4 h-4 text-orange-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a11 11 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"/>
+                </svg>
+                +91 8073 791 662
+              </a>
+            </div>
+            <div>
+              <span class="text-slate-400 block mb-0.5">WhatsApp Booking:</span>
+              <a href="#" onclick="openWA('Hello S V Tours & Travels! I want to enquire about cab booking.'); return false;" class="text-emerald-400 font-bold hover:underline flex items-center gap-1.5">
+                <span>Chat on WhatsApp (+91 8073 791 662)</span>
+              </a>
+            </div>
+            <div>
+              <span class="text-slate-400 block mb-0.5">Availability:</span>
+              <span class="text-slate-200">24 Hours / 7 Days a Week (All days)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tariff Quick Reference -->
+        <div>
+          <h4 class="font-bold text-sm uppercase text-orange-400 tracking-wider mb-3">Outstation Tariff</h4>
+          <ul class="text-xs space-y-2 text-slate-300">
+            <li class="flex justify-between border-b border-slate-800/80 pb-1">
+              <span>Comfort Sedan</span>
+              <strong class="text-orange-400">Rs. 11/km (Bata Rs. 300)</strong>
+            </li>
+            <li class="flex justify-between border-b border-slate-800/80 pb-1">
+              <span>Maruti Ertiga MPV</span>
+              <strong class="text-orange-400">Rs. 15/km (Bata Rs. 400)</strong>
+            </li>
+            <li class="flex justify-between border-b border-slate-800/80 pb-1">
+              <span>Toyota Innova</span>
+              <strong class="text-orange-400">Rs. 16/km (Bata Rs. 400)</strong>
+            </li>
+            <li class="flex justify-between border-b border-slate-800/80 pb-1">
+              <span>Innova Crysta</span>
+              <strong class="text-orange-400">Rs. 18/km (Bata Rs. 400)</strong>
+            </li>
+            <li class="text-[11px] text-slate-500 pt-1">*Standard 300 km/day mileage rule applies.</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Copyright -->
+      <div class="pt-6 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-slate-500">
+        <div>
+          &copy; 2026 S V Tours &amp; Travels, Hubballi. All rights reserved.
+        </div>
+        <div class="text-slate-400">
+          Hubballi, Karnataka &bull; 24/7 Outstation &amp; Local Cabs
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ══════════════════════ FLOATING WHATSAPP BUTTON ══════════════════════ -->
+  <a href="#" onclick="openWA('Hello S V Tours &amp; Travels! I would like to book a cab.'); return false;"
+     class="wa-float-btn fixed bottom-20 md:bottom-8 right-6 z-50 w-14 h-14 bg-emerald-600 hover:bg-emerald-500 rounded-full flex items-center justify-center hover:scale-110 transition-all shadow-xl"
+     title="Book via WhatsApp">
+    <svg class="w-7 h-7" viewBox="0 0 24 24" fill="white">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <!-- ══════════════════════ MOBILE BOTTOM STICKY BAR ══════════════════════ -->
+  <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-navy-950 border-t border-slate-800 p-2.5 px-4 flex gap-3 shadow-2xl">
+    <a href="tel:+918073791662" class="flex-1 bg-slate-800 text-slate-100 font-bold py-3 rounded-xl text-xs flex items-center justify-center gap-2 border border-slate-700">
+      <svg class="w-4 h-4 text-orange-400" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a11 11 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"/>
+      </svg>
+      <span>Call Owner</span>
+    </a>
+    <a href="#" onclick="openWA('Hello S V Tours &amp; Travels! I would like to book a cab.'); return false;"
+       class="flex-1 bg-emerald-600 text-white font-bold py-3 rounded-xl text-xs flex items-center justify-center gap-2 shadow-lg">
+      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+      <span>WhatsApp</span>
+    </a>
+  </div>
+
+  <!-- ══════════════════════ SCRIPTS ══════════════════════ -->
+  <script>
+    const OWNER_PHONE = '918073791662';
+
+    function openWA(message) {
+      const url = 'https://wa.me/' + OWNER_PHONE + '?text=' + encodeURIComponent(message);
+      window.open(url, '_blank');
+    }
+
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 30) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const burger = document.querySelector('.burger');
+      if (menu) menu.classList.toggle('open');
+      if (burger) burger.classList.toggle('open');
+    }
+
+    let selectedTripType = 'Round Trip';
+    function setTripType(btn, type) {
+      selectedTripType = type;
+      document.querySelectorAll('.trip-btn').forEach(b => {
+        b.classList.remove('bg-orange-500', 'border-orange-500', 'text-white');
+        b.classList.add('border-slate-200', 'text-slate-600');
+      });
+      btn.classList.remove('border-slate-200', 'text-slate-600');
+      btn.classList.add('bg-orange-500', 'border-orange-500', 'text-white');
+    }
+
+    function submitQuickBooking(e) {
+      e.preventDefault();
+      const name = document.getElementById('hb_name').value.trim();
+      const phone = document.getElementById('hb_phone').value.trim();
+      const from = document.getElementById('hb_from').value.trim();
+      const to = document.getElementById('hb_to').value.trim();
+      const vehicle = document.getElementById('hb_vehicle').value;
+      const date = document.getElementById('hb_date').value;
+
+      const message =
+        '*Cab Booking Request - S V Tours &amp; Travels*\n' +
+        '----------------------------------\n' +
+        '*Name:* ' + name + '\n' +
+        '*Phone:* ' + phone + '\n' +
+        '*Pickup:* ' + from + '\n' +
+        '*Destination:* ' + to + '\n' +
+        '*Vehicle:* ' + vehicle + '\n' +
+        '*Date:* ' + date + '\n' +
+        '*Trip Type:* ' + selectedTripType + '\n' +
+        '----------------------------------\n' +
+        'Please confirm availability and fare.';
+
+      openWA(message);
+    }
+
+    function toggleFAQ(btn) {
+      const item = btn.closest('.faq-item');
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('open'));
+      if (!wasOpen) {
+        item.classList.add('open');
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const today = new Date().toISOString().split('T')[0];
+      const dateEl = document.getElementById('hb_date');
+      if (dateEl) dateEl.min = today;
+    });
+  </script>
+</body>
+</html>
